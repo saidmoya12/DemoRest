@@ -1,6 +1,5 @@
 package demo.res.http;
 
-import java.beans.ExceptionListener;
 import java.io.IOException;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
@@ -18,7 +17,6 @@ import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.nio.client.CloseableHttpAsyncClient;
 import org.apache.http.impl.nio.client.HttpAsyncClients;
 
-import javafx.application.Platform;
 
 public class HTTPClient {
 	private CloseableHttpAsyncClient httpclient;
@@ -36,4 +34,3 @@ public class HTTPClient {
 		return new HTTPRequest(this.httpclient); 
 	}
 }
-
