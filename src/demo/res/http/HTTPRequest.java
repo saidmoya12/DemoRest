@@ -14,8 +14,6 @@ import org.apache.http.concurrent.FutureCallback;
 import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.nio.client.CloseableHttpAsyncClient;
 
-import javafx.application.Platform;
-
 public class HTTPRequest {
 	private HttpRequestBase request;
 	CloseableHttpAsyncClient httpclient;
