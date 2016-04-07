@@ -1,12 +1,13 @@
 package demo.res.api;
 
 import org.apache.http.client.HttpResponseException;
+
 import org.json.simple.JSONArray;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-
 import demo.res.http.HTTPRequest;
 
+//Methodo request con parseador a json
 public class Request{
 	
 	public Request(String path, String method) {
