@@ -6,8 +6,6 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 import demo.res.http.HTTPRequest;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType;
 
 public class Request{
 	
@@ -25,21 +23,19 @@ public class Request{
 				}
 			}
 			public void onFailed(HttpResponseException e){
-				new Alert(AlertType.ERROR, e.getMessage()).showAndWait();
+				e.printStackTrace();
 			}
 			
 			@Override
 			public void onCancelled() {
-				new Alert(AlertType.INFORMATION, "Canceled").showAndWait();
+				System.out.println("canceled");
 			}
 		};
-		
-		switch(method){
-			case "get":
-				request.httpGet(APIEndpoints.generate(path))
-					//.setHeader(new BasicHeader("auth", ManageAPI.userAuth))
-				;
-			break;
+		if(String(method).equals("get"){
+			request.httpGet(APIEndpoints.generate(path))
+				//.setHeader(new BasicHeader("auth", ManageAPI.userAuth))
+			;
+			
 		}
 		
 		request.execute();
