@@ -31,7 +31,7 @@ public class Request{
 				System.out.println("canceled");
 			}
 		};
-		if(String(method).equals("get"){
+		if(new String(method).equals("get")){
 			request.httpGet(APIEndpoints.generate(path))
 				//.setHeader(new BasicHeader("auth", ManageAPI.userAuth))
 			;
