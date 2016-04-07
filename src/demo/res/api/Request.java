@@ -36,6 +36,10 @@ public class Request{
 				//.setHeader(new BasicHeader("auth", ManageAPI.userAuth))
 			;
 			
+		}else if(new String(method).equals("post")){
+			request.httpPost(APIEndpoints.generate(path))
+				//.setHeader(new BasicHeader("auth", ManageAPI.userAuth))
+			;
 		}
 		
 		request.execute();

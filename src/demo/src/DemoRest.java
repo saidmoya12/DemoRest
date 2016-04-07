@@ -8,7 +8,7 @@ import demo.res.api.*;
 public class DemoRest {
 
 	public static void main(String[] args) {
-		
+		//Nuevo request
 		Request Request = new Request("posts", "get"){
 			@Override
 			public void onSuccess(JSONArray result) {

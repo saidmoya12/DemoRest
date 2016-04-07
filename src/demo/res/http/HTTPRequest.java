@@ -1,10 +1,8 @@
 package demo.res.http;
 
-import java.io.IOException;
 import java.util.concurrent.Future;
 
 import org.apache.http.HttpResponse;
-import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpResponseException;
 import org.apache.http.client.ResponseHandler;
 import org.apache.http.client.methods.HttpGet;
@@ -14,6 +12,7 @@ import org.apache.http.concurrent.FutureCallback;
 import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.nio.client.CloseableHttpAsyncClient;
 
+//Clase request, recibe el http client y hace la ejecución según el método seleccionado
 public class HTTPRequest {
 	private HttpRequestBase request;
 	CloseableHttpAsyncClient httpclient;
@@ -44,24 +43,6 @@ public class HTTPRequest {
 				} catch (Exception e) {
 					HTTPRequest.this.onFailed((HttpResponseException) e);
 				}
-				 
-				/*
-				try {
-					String message = handler.handleResponse(response).toString();
-					Platform.runLater(new Runnable() {
-						public void run() {
-							System.out.print(message);
-							HTTPRequest.this.onSuccess(message); 
-						}
-					});
-					
-				} catch (Exception e) {
-					Platform.runLater(new Runnable() {
-						public void run() {
-							HTTPRequest.this.onFailed((HttpResponseException) e);
-						}
-					});
-				}*/
 			}
 			
 			@Override

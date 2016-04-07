@@ -17,7 +17,7 @@ import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.nio.client.CloseableHttpAsyncClient;
 import org.apache.http.impl.nio.client.HttpAsyncClients;
 
-
+//conexion al cliente http
 public class HTTPClient {
 	private CloseableHttpAsyncClient httpclient;
 	
